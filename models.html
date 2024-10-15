@@ -372,8 +372,8 @@
             <div class="input-small">
         <label for="time">التوقيت الحالي:</label>
                       <div class="input-row">
-                          <input type="text" id="start_minute" placeholder="الدقيقة" style="width: 70px;">
-                          <input type="text" id="start_hour" placeholder="الساعة" style="width: 70px;">
+                          <input type="number" id="start_minute" placeholder="الدقيقة" style="width: 70px;">
+                          <input type="number" id="start_hour" placeholder="الساعة" style="width: 70px;">
           </div>
           </div>
           </div>
@@ -797,17 +797,17 @@
         <div class="input-row">
             <div class="input-small">
                     <label for="working_teams">عدد الفرق العاملة:</label>
-                    <input type="text" id="working_teams" required>
+                    <input type="number" id="working_teams" required>
                  </div>
                         <div class="input-small">
                     <label for="total_teams">من أصل:</label>
-                    <input type="text" id="total_teams">
+                    <input type="number" id="total_teams">
                         </div>
                     </div>
                           <div class="input-row">
 			<div class="input-small">
                             <label for="operating_vehicles">عدد المركبات العاملة:</label>
-                            <input type="text" id="operating_vehicles" required>
+                            <input type="number" id="operating_vehicles" required>
                         </div>
                         <div class="input-small">
                             <label for="broken_vehicles">عدد المركبات المتعطلة:</label>
@@ -821,17 +821,17 @@
                           <div class="input-row">
 			<div class="input-small">
                     <label for="open_logistics_reports">بلاغات الدعم اللوجستي المفتوحة:</label>
-                    <input type="text" id="open_logistics_reports">
+                    <input type="number" id="open_logistics_reports">
                         </div>
                         <div class="input-small">
                     <label for="coordination_teams">عدد العاملين في التنسيق والتحكم:</label>
-                    <input type="text" id="coordination_teams">
+                    <input type="number" id="coordination_teams">
                         </div>
                     </div>
                           <div class="input-row">
 			<div class="input-small">
                     <label for="logistics_support_teams">عدد العاملين في الدعم اللوجستي:</label>
-                    <input type="text" id="logistics_support_teams">
+                    <input type="number" id="logistics_support_teams">
                       </div>
                         <div class="input-small">
                     <label for="hospitals_out_of_service">قائمة المستشفيات خارج الخدمة:</label>
@@ -949,8 +949,8 @@
                   <div class="input-row">
                       <label for="event_start">بداية الحدث (نظام 24 ساعة):</label>
                       <div class="input-row">
-                          <input type="text" id="start_minute" placeholder="الدقيقة" style="width: 45px;">
-                          <input type="text" id="start_hour" placeholder="الساعة" style="width: 45px;">
+                          <input type="number" id="start_minute" placeholder="الدقيقة" style="width: 45px;">
+                          <input type="number" id="start_hour" placeholder="الساعة" style="width: 45px;">
                       </div>
                   </div>
         
@@ -1024,8 +1024,8 @@
                         <div class="input-small">
                     <label for="report_time">توقيت التقرير (نظام 24 ساعة):</label>
                     <div class="input-row">
-                        <input type="text" id="report_minute" placeholder="الدقيقة" style="width: 70px;">
-                        <input type="text" id="report_hour" placeholder="الساعة" style="width: 70px;">
+                        <input type="number" id="report_minute" placeholder="الدقيقة" style="width: 70px;">
+                        <input type="number" id="report_hour" placeholder="الساعة" style="width: 70px;">
                     </div>
                     </div>
                     </div>
@@ -1033,7 +1033,7 @@
                     <div class="input-row">
                   	  <div class="input-small">
                     <label for="report_number">رقم البلاغ:</label>
-                    <input type="text" id="report_number" required>
+                    <input type="number" id="report_number" required>
                  </div>
                         <div class="input-small">
                     <label for="report_type">نوع البلاغ:</label>
@@ -1246,21 +1246,21 @@
 			
                     <label for="report_time">توقيت طلب الدعم (نظام 24 ساعة):</label>
                     <div class="input-row">
-                        <input type="text" id="report_minute" placeholder="الدقيقة" style="width: 45px;">
-                        <input type="text" id="report_hour" placeholder="الساعة" style="width: 45px;">
+                        <input type="number" id="report_minute" placeholder="الدقيقة" style="width: 45px;">
+                        <input type="number" id="report_hour" placeholder="الساعة" style="width: 45px;">
                     </div>
 
                     <label for="units_linked">عدد الوحدات المرتبطة ببلاغ:</label>
-                    <input type="text" id="units_linked">
+                    <input type="number" id="units_linked">
 
                     <label for="units_ready">عدد الوحدات الجاهزة:</label>
-                    <input type="text" id="units_ready">
+                    <input type="number" id="units_ready">
 
                     <label for="units_out_of_order">عدد الوحدات الخارجة عن الجاهزية:</label>
-                    <input type="text" id="units_out_of_order">
+                    <input type="number" id="units_out_of_order">
 
                     <label for="working_teams_shift">عدد فرق القطاع العاملة أثناء المناوبة:</label>
-                    <input type="text" id="working_teams_shift">
+                    <input type="number" id="working_teams_shift">
 
                     <label for="challenges">التحديات والاجراءات المتخذة:</label>
                     <textarea id="challenges" rows="4" placeholder="1- ...&#10;2- ..."></textarea>
@@ -1323,23 +1323,23 @@
 				</div>
                 <label for="dispatch_time">توقيت تحريك الدعم (نظام 24 ساعة):</label>
                 <div class="input-row">
-                    <input type="text" id="dispatch_minute" placeholder="الدقيقة" style="width: 45px;">
-                    <input type="text" id="dispatch_hour" placeholder="الساعة" style="width: 45px;">
+                    <input type="number" id="dispatch_minute" placeholder="الدقيقة" style="width: 45px;">
+                    <input type="number" id="dispatch_hour" placeholder="الساعة" style="width: 45px;">
                 </div>
 
                 <label for="arrival_time">توقيت وصول الدعم (نظام 24 ساعة):</label>
                 <div class="input-row">
-                    <input type="text" id="arrival_minute" placeholder="الدقيقة" style="width: 45px;">
-                    <input type="text" id="arrival_hour" placeholder="الساعة" style="width: 45px;">
+                    <input type="number" id="arrival_minute" placeholder="الدقيقة" style="width: 45px;">
+                    <input type="number" id="arrival_hour" placeholder="الساعة" style="width: 45px;">
                 </div>
 
                 <label for="support_teams_count">عدد الفرق الداعمة:</label>
-                <input type="text" id="support_teams_count">
+                <input type="number" id="support_teams_count">
 
                 <label for="end_time">توقيت انتهاء الدعم (نظام 24 ساعة):</label>
                 <div class="input-row">
-                    <input type="text" id="end_minute" placeholder="الدقيقة" style="width: 45px;">
-                    <input type="text" id="end_hour" placeholder="الساعة" style="width: 45px;">
+                    <input type="number" id="end_minute" placeholder="الدقيقة" style="width: 45px;">
+                    <input type="number" id="end_hour" placeholder="الساعة" style="width: 45px;">
                 </div>
             </div>
 
@@ -1368,10 +1368,10 @@
             <input type="text" id="region_leader" placeholder="أدخل اسم قائد المنطقة">
             
             <label for="region_leader_phone">جوال:</label>
-            <input type="text" id="region_leader_phone" placeholder="أدخل رقم الجوال">
+            <input type="number" id="region_leader_phone" placeholder="أدخل رقم الجوال">
             
             <label for="region_leader_channel">قناة:</label>
-            <input type="text" id="region_leader_channel" placeholder="أدخل رقم القناة">
+            <input type="number" id="region_leader_channel" placeholder="أدخل رقم القناة">
         </div>
         
         <div class="form-section">
@@ -1384,7 +1384,7 @@
                 </div>
                 <div class="input-small">
                     <label for="east_channel">قناة:</label>
-                    <input type="text" id="east_channel" placeholder="أدخل رقم القناة">
+                    <input type="number" id="east_channel" placeholder="أدخل رقم القناة">
                 </div>
             </div>
             
@@ -1395,7 +1395,7 @@
                 </div>
                 <div class="input-small">
                     <label for="west_channel">قناة:</label>
-                    <input type="text" id="west_channel" placeholder="أدخل رقم القناة">
+                    <input type="number" id="west_channel" placeholder="أدخل رقم القناة">
                 </div>
             </div>
             
@@ -1406,7 +1406,7 @@
                 </div>
                 <div class="input-small">
                     <label for="south_channel">قناة:</label>
-                    <input type="text" id="south_channel" placeholder="أدخل رقم القناة">
+                    <input type="number" id="south_channel" placeholder="أدخل رقم القناة">
                 </div>
             </div>
             
@@ -1417,7 +1417,7 @@
                 </div>
                 <div class="input-small">
                     <label for="central_channel">قناة:</label>
-                    <input type="text" id="central_channel" placeholder="أدخل رقم القناة">
+                    <input type="number" id="central_channel" placeholder="أدخل رقم القناة">
                 </div>
             </div>
             
@@ -1428,7 +1428,7 @@
                 </div>
                 <div class="input-small">
                     <label for="north_channel">قناة:</label>
-                    <input type="text" id="north_channel" placeholder="أدخل رقم القناة">
+                    <input type="number" id="north_channel" placeholder="أدخل رقم القناة">
                 </div>
             </div>
         </div>
