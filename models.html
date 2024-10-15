@@ -2006,7 +2006,7 @@ function sendWhatsAppMessage(formName) {
 	        formText += `توقيت انتهاء الدعم: ${document.getElementById('end_hour').value}:${document.getElementById('end_minute').value}\n`;
 		      }
    } else if (formName === 'senior_paramedic_outside') {
-        formText += `*==كبار مسعفين قطاعات الرياض الخارجية ==*\n\n`;
+        formText += `*==تكميل كبار مسعفين القطاعات الخارجية==*\n\n`;
     	formText += `القطاع: ${document.getElementById('sector').value}\n`;
     	formText += `التاريخ: ${document.getElementById('date').value}\n`;
     	formText += `الوقت الحالي: ${document.getElementById('start_hour').value}:${document.getElementById('start_minute').value}\n`;
@@ -2256,7 +2256,7 @@ document.addEventListener("DOMContentLoaded", function () {
     selectCurrentTime();  
 });
 
-// فنكشن حساب إجمالي مركبات وفرق منطقة الرياض  
+// فنكشن حساب إجمالي مركبات وفرق المنطقة   
 function calculateTotals() {
     // حساب إجمالي مركبات القطاعات الداخلية العاملة
     const internal_vehicles_total = 
@@ -2289,14 +2289,14 @@ function calculateTotals() {
     // عرض إجمالي مركبات القطاعات الخارجية
     document.getElementById('external_vehicles_total').value = external_vehicles_total;
 
-    // حساب إجمالي المركبات العاملة في منطقة الرياض
+    // حساب إجمالي المركبات العاملة في المنطقة 
     const total_working_vehicles_riyadh = internal_vehicles_total + external_vehicles_total;
     document.getElementById('total_working_vehicles_riyadh').value = total_working_vehicles_riyadh;
 
     // عرض إجمالي الفرق العاملة للقطاعات الخارجية
     document.getElementById('external_teams_total').value = external_teams_total;
 
-    // حساب إجمالي الفرق العاملة في منطقة الرياض
+    // حساب إجمالي الفرق العاملة في المنطقة 
     const internal_teams_total = 
         (parseInt(document.getElementById('center_sector_teams').value) || 0) +
         (parseInt(document.getElementById('east_sector_teams').value) || 0) +
@@ -2322,7 +2322,7 @@ function calculateTotals() {
     // عرض إجمالي المركبات المتعطلة للقطاعات الخارجية
     document.getElementById('external_broken_vehicles_total').value = external_broken_vehicles_total;
 
-    // حساب إجمالي المركبات المتعطلة في منطقة الرياض
+    // حساب إجمالي المركبات المتعطلة في المنطقة
     const total_broken_vehicles_riyadh = internal_broken_vehicles_total + external_broken_vehicles_total;
     document.getElementById('total_broken_vehicles_riyadh').value = total_broken_vehicles_riyadh;
 }
