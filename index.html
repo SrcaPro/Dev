@@ -1,0 +1,84 @@
+<!-- Ali ALshahrani -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم القيادات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased font-sans">
+    <div class="container mx-auto p-6">
+        <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- نماذج القطاع الداخلي -->
+            <div class="bg-blue-500 text-white p-6 rounded-lg text-center cursor-pointer hover:bg-blue-600" data-toggle="sector">
+                <h2 class="font-bold" style="font-size: 1.25rem;">نماذج القطاعات داخل مدينة الرياض</h2>
+                <ul class="mt-4 hidden">
+                    <li><a href="#" class="block bg-white text-blue-500 p-2 rounded-md my-2" onclick="loadForm('senior_paramedic')">نموذج كبار المسعفين (داخلي)</a></li>
+                    <li><a href="#" class="block bg-white text-blue-500 p-2 rounded-md my-2" onclick="loadForm('operational_failure')">نموذج فشل تشغيلي</a></li>
+                    <li><a href="#" class="block bg-white text-blue-500 p-2 rounded-md my-2" onclick="loadForm('eco_reports')">نموذج بلاغات إيكو</a></li>
+                    <li><a href="#" class="block bg-white text-blue-500 p-2 rounded-md my-2" onclick="loadForm('major_event')">نموذج حدث جسيم</a></li>
+                    <li><a href="#" class="block bg-white text-blue-500 p-2 rounded-md my-2" onclick="loadForm('support_request')">طلب تفعيل خطة المساندة</a></li>
+                </ul>
+            </div>
+
+            <!-- نماذج القطاع الخارجي -->
+            <div class="bg-yellow-500 text-white p-6 rounded-lg text-center cursor-pointer hover:bg-yellow-600" data-toggle="sector">
+            <h2 class="font-bold" style="font-size: 1.25rem;">نماذج القطاعات خارج مدينة الرياض</h2>
+                <ul class="mt-4 hidden">
+                    <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('senior_paramedic_outside')">نموذج كبار المسعفين (خارجي)</a></li>
+                    <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('operational_failure')">نموذج فشل تشغيلي</a></li>
+                    <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('eco_reports')">نموذج بلاغات إيكو</a></li>
+                    <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('major_event')">نموذج حدث جسيم</a></li>
+                    <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('support_request')">طلب تفعيل خطة المساندة</a></li>
+                </ul>
+            </div>
+
+            <!-- نماذج قائد المنطقة -->
+            <div class="bg-red-500 text-white p-6 rounded-lg text-center cursor-pointer hover:bg-red-600" data-toggle="sector">
+            <h2 class="font-bold" style="font-size: 1.25rem;">نماذج قائد المنطقة</h2>
+                <ul class="mt-4 hidden">
+                    <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('regional_leader_form')">نموذج قائد المنطقة المناوب</a></li>
+                    <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('attendance')">نموذج تحضير</a></li>
+                    <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('rapid_response_reports')">نموذج بلاغات التدخل السريع</a></li>
+                    <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('support_activation')">قبول تفعيل خطة المساندة</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('div[data-toggle="sector"]');
+        sections.forEach(section => {
+            section.addEventListener('click', function() {
+                const ul = this.querySelector('ul');
+                const allUl = document.querySelectorAll('ul');
+
+                // إغلاق كل القوائم الأخرى
+                allUl.forEach(item => {
+                    if (item !== ul) {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                // إظهار أو إخفاء القائمة الحالية
+                ul.classList.toggle('hidden');
+            });
+        });
+
+        function loadForm(formType) {
+            window.location.href = "models.html?formType=" + formType;
+        }
+        
+    const urlParams = new URLSearchParams(window.location.search);
+    const formType = urlParams.get('formType');
+    console.log("Loaded formType: ", formType);
+
+    </script>
+        <footer>
+        <div style="font-size: 14px; color: #ccc; text-align: center;">
+            الإصدار 1
+        </div>
+    </footer>
+</body>
+</html>
