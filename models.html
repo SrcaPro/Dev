@@ -1287,7 +1287,7 @@
 
         <div class="form-section">
             <label for="support_status">حالة الدعم:</label>
-            <select id="support_status" onchange="toggleFieldsBasedOnSupportStatus()" required>
+            <select id="support_status" onchange="toggleFieldsBasedOnSupportStatus()">
                 <option value="الموافقة">الموافقة</option>
                 <option value="الرفض">الرفض</option>
             </select>
@@ -1299,14 +1299,14 @@
 				<div id="supportDetails">
 				<label for="supported_sector_1">اكتب اسم القطاع المدعوم:</label>
 				<div id="supported-sectors-container">
-					<input type="text" id="supported_sector_1" placeholder="مثال: قطاع الوسط" required>
+					<input type="text" id="supported_sector_1" placeholder="مثال: قطاع الوسط">
 				</div>
 
 				<!-- مجموعة القطاعات الداعمة -->
 				<label for="support_sector_1">اكتب اسم القطاعات الداعمة:</label>
 				<div id="support-sectors-container">
 					<div class="input-row">
-						<input type="text" id="support_sector_1" placeholder="اكتب اسم القطاع الداعم" required>
+						<input type="text" id="support_sector_1" placeholder="اكتب اسم القطاع الداعم">
 					</div>
 				</div>
 
@@ -1992,11 +1992,10 @@ function sendWhatsAppMessage(formName) {
 
         formText += `\n*اسم كبير المسعفين:* ${document.getElementById('senior_paramedic_name').value}\n`;
 	} else if (formName === 'support_activation') {
-        formText += `*=== نموذج قبول تفعيل خطة المساندة والدعم المتبادل ===*\n\n`;
-	    formText += `حالة الدعم: ${document.getElementById('support_status').value}\n`;
-	    formText += `أسباب القبول أو الرفض: ${document.getElementById('support_reasons').value}\n`;
 	    formText += `اسم قائد المنطقة: ${document.getElementById('region_leader_name').value}\n`;
-	
+	    formText += `*=== نموذج قبول تفعيل خطة المساندة والدعم المتبادل ===*\n\n`;
+	    formText += `حالة الدعم: ${document.getElementById('support_status').value}\n`;
+	    formText += `أسباب القبول أو الرفض: ${document.getElementById('support_reasons').value}\n`;	
 	    if (document.getElementById('support_status').value === 'الموافقة') {
 	        // إرسال القيم المختارة في الرسالة
 		// إضافة القطاعات المدعومة والداعمة إلى النص النهائي
