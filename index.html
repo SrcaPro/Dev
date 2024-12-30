@@ -1,4 +1,4 @@
-<!-- Ali ALshahrani -->
+<!-- Ali Alshahrani -->
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -24,7 +24,7 @@
 
             <!-- نماذج القطاع الخارجي -->
             <div class="bg-yellow-500 text-white p-6 rounded-lg text-center cursor-pointer hover:bg-yellow-600" data-toggle="sector">
-            <h2 class="font-bold" style="font-size: 1.25rem;">نماذج القطاعات الخارجية</h2>
+                <h2 class="font-bold" style="font-size: 1.25rem;">نماذج القطاعات الخارجية</h2>
                 <ul class="mt-4 hidden">
                     <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('senior_paramedic_outside')">نموذج كبار المسعفين (خارجي)</a></li>
                     <li><a href="#" class="block bg-white text-yellow-500 p-2 rounded-md my-2" onclick="loadForm('operational_failure')">نموذج فشل تشغيلي</a></li>
@@ -36,7 +36,7 @@
 
             <!-- نماذج قائد المنطقة -->
             <div class="bg-red-500 text-white p-6 rounded-lg text-center cursor-pointer hover:bg-red-600" data-toggle="sector">
-            <h2 class="font-bold" style="font-size: 1.25rem;">نماذج قائد المنطقة</h2>
+                <h2 class="font-bold" style="font-size: 1.25rem;">نماذج قائد المنطقة</h2>
                 <ul class="mt-4 hidden">
                     <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('regional_leader_form')">نموذج قائد المنطقة المناوب</a></li>
                     <li><a href="#" class="block bg-white text-red-500 p-2 rounded-md my-2" onclick="loadForm('attendance')">نموذج تحضير</a></li>
@@ -70,14 +70,17 @@
             window.location.href = "models.html?formType=" + formType;
         }
         
-    const urlParams = new URLSearchParams(window.location.search);
-    const formType = urlParams.get('formType');
-    console.log("Loaded formType: ", formType);
-
+        const urlParams = new URLSearchParams(window.location.search);
+        const formType = urlParams.get('formType');
+        console.log("Loaded formType: ", formType);
     </script>
-        <footer>
+
+    <footer style="width: 100%; padding: 10px 0;">
+        <div style="font-size: 14px; color: #aaa; text-align: center;">
+            إصدار النسخة: 1
+        </div>
         <div style="font-size: 14px; color: #ccc; text-align: center;">
-            الإصدار 1
+            Design and Development by Ali Alshahrani
         </div>
     </footer>
 </body>
